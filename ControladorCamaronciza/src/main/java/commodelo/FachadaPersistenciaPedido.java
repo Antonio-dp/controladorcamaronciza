@@ -2,8 +2,6 @@ package commodelo;
 
 import coninterfaces.IFachadaPersistenciaPedido;
 import dominio.Pedido;
-
-import java.util.List;
 import modelos.ModeloPedido;
 
 public class FachadaPersistenciaPedido implements IFachadaPersistenciaPedido {
@@ -18,7 +16,7 @@ public class FachadaPersistenciaPedido implements IFachadaPersistenciaPedido {
 
     @Override
     public void consultarPedido(Pedido pedido){
-        modeloPedido.consultar(pedido.getId());
+        System.out.println(modeloPedido.consultar(pedido.getId()).getId());
     }
 
     @Override
