@@ -1,9 +1,13 @@
 package commodelo;
 
-import persistencia.PedidosJpaController;
+import conexiones.ConexionBD;
+import interfaces.IConexionBD;
+import modelos.ModeloPedido;
+
 
 public class PersistenciaFactory {
-    public static PedidosJpaController crearPersistenciaPedido(){
-        return new PedidosJpaController();
+    private static final IConexionBD conexionBD = ConexionBD.getInstance();
+    public static ModeloPedido crearPersistenciaPedido(){
+        return new ModeloPedido(conexionBD);
     }
 }

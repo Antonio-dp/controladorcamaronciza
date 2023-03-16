@@ -1,14 +1,11 @@
 package coninterfaces;
 
-import modelo.Pedidos;
+import dominio.Pedido;
 
 import java.util.List;
 
 public interface IFachadaPersistenciaPedido {
-    public void crearPedido(Pedidos pedido);
-    public void editarPedido(Pedidos pedido) throws Exception;
-    public void eliminarPedido(Pedidos pedido);
-
-    public List<Pedidos> consultarPedidos();
-    public Pedidos consultarPedidoById(Integer id);
+    public void crearPedido(Pedido pedido);
+    public void editarPedido(Pedido pedido);
+    public void eliminarPedido(Pedido pedido);
 }
