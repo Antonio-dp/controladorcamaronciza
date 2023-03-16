@@ -10,17 +10,17 @@ public class FachadaPersistenciaPedido implements IFachadaPersistenciaPedido {
         this.modeloPedido = PersistenciaFactory.crearPersistenciaPedido();
     }
     @Override
-    public void crearPedido(Pedido pedido) {
-        modeloPedido.registrar(pedido);
+    public Pedido crearPedido(Pedido pedido) {
+        return modeloPedido.registrar(pedido);
     }
 
     @Override
-    public void consultarPedido(Pedido pedido){
-        System.out.println(modeloPedido.consultar(pedido.getId()).getId());
+    public Pedido consultarPedido(Pedido pedido){
+        return modeloPedido.consultar(pedido.getId());
     }
 
     @Override
-    public void eliminarPedido(Pedido pedido) {
-        modeloPedido.eliminar(pedido);
+    public Pedido eliminarPedido(Pedido pedido) {
+        return modeloPedido.eliminar(pedido);
     }
 }

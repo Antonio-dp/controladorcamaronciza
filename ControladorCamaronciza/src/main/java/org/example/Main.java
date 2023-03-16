@@ -7,6 +7,6 @@ public class Main {
     public static void main(String[] args) {
         FachadaPersistenciaPedido fpp = new FachadaPersistenciaPedido();
         Pedido p = new Pedido(1);
-        fpp.consultarPedido(p);
+        System.out.println(fpp.consultarPedido(p).getId());
     }
 }
